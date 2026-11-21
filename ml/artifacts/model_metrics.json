@@ -1,0 +1,124 @@
+{
+  "model_name": "ParaliPool Farm Risk Intelligence Engine",
+  "architecture": {
+    "scaler": "StandardScaler",
+    "classifier": "MLPClassifier",
+    "hidden_layers": [
+      32,
+      16,
+      8
+    ],
+    "activation": "relu",
+    "optimizer": "adam",
+    "epochs_trained": 37
+  },
+  "dataset": {
+    "total_rows": 100000,
+    "train_rows": 69999,
+    "test_rows": 15000,
+    "positive_class_rate": 0.4242
+  },
+  "test_metrics": {
+    "accuracy": 0.9824,
+    "precision": 0.9794,
+    "recall": 0.9791,
+    "f1_score": 0.9793,
+    "roc_auc": 0.9989
+  },
+  "confusion_matrix": {
+    "labels": [
+      "0_ON_TIME",
+      "1_DEADLINE_MISS"
+    ],
+    "matrix": [
+      [
+        8506,
+        131
+      ],
+      [
+        133,
+        6230
+      ]
+    ],
+    "tn": 8506,
+    "fp": 131,
+    "fn": 133,
+    "tp": 6230
+  },
+  "permutation_importance": [
+    {
+      "feature": "days_to_deadline",
+      "importance_mean": 0.3793,
+      "importance_std": 0.0036
+    },
+    {
+      "feature": "queue_acres_ahead",
+      "importance_mean": 0.1056,
+      "importance_std": 0.002
+    },
+    {
+      "feature": "machine_capacity_per_day",
+      "importance_mean": 0.0782,
+      "importance_std": 0.0014
+    },
+    {
+      "feature": "rain_delay_days",
+      "importance_mean": 0.0653,
+      "importance_std": 0.0012
+    },
+    {
+      "feature": "available_machines_nearby",
+      "importance_mean": 0.0533,
+      "importance_std": 0.0012
+    },
+    {
+      "feature": "farm_acres",
+      "importance_mean": 0.051,
+      "importance_std": 0.0014
+    },
+    {
+      "feature": "distance_to_chc_km",
+      "importance_mean": 0.0066,
+      "importance_std": 0.0006
+    }
+  ],
+  "loss_curve": [
+    0.29121,
+    0.06225,
+    0.0507,
+    0.04737,
+    0.04557,
+    0.045,
+    0.04439,
+    0.04409,
+    0.04373,
+    0.0434,
+    0.0432,
+    0.04284,
+    0.04252,
+    0.04262,
+    0.04269,
+    0.04247,
+    0.04199,
+    0.04242,
+    0.04215,
+    0.0417,
+    0.04145,
+    0.04139,
+    0.04192,
+    0.0417,
+    0.0414,
+    0.04113,
+    0.04118,
+    0.0417,
+    0.04093,
+    0.04137,
+    0.04072,
+    0.04134,
+    0.04095,
+    0.04095,
+    0.04092,
+    0.04086,
+    0.0412
+  ]
+}
