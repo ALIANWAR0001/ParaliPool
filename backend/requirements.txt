@@ -1,3 +1,10 @@
 fastapi[standard]
 uvicorn
 pydantic
+fastapi[standard]
+uvicorn
+pydantic
+scikit-learn
+joblib
+pandas
+numpy
